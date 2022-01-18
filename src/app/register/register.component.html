@@ -1,0 +1,99 @@
+<app-nav-bar></app-nav-bar>
+<body>
+
+    <div class="register-box">
+      <ul>
+        <li><p routerLink="/login" routerLinkActive="link-active">Login</p>
+        <p routerLink="/register" routerLinkActive="link-active">Register</p></li>
+      </ul>
+        <form [formGroup]="userRegistration" valid>
+          <div class="user-box">
+            <input type="text" name="username" required="" formControlName="userName">
+            <label>UserName</label>
+            <span class="text-danger"
+                                *ngIf="(registerFormControl.userName.touched || submitted) && registerFormControl.userName.errors?.required">
+                                User Name is required
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="registerFormControl.userName.touched && registerFormControl.userName.errors?.userNameNotAvailable">
+                                User Name is not available
+                            </span>
+          </div>
+
+          <div class="user-box">
+            <input type="text" name="email" required="" formControlName="email">
+            <label>Email</label>
+            <span class="text-danger"
+            *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+            Email is required
+        </span>
+        <span class="text-danger"
+            *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+            Enter a valid email address
+        </span>
+          </div>
+          <div class="user-box">
+            <input type="password" name="password" required="" formControlName="password">
+            <label>Password</label>
+            <span class="text-danger"
+            *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+            Password is required
+        </span>
+        <span class="text-danger"
+            *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+            Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+            letter and 1 number
+        </span>
+
+          </div>
+          <div class="user-box">
+            <input type="password" name="confirmpassword" required="" formControlName="confirmPassword">
+            <label>ConfirmPassword</label>
+            <span class="text-danger"
+            *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
+            Confirm Password is required
+        </span>
+        <span class="text-danger"
+            *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+            Passwords doesnot match
+        </span>
+        <br>
+        <div class="container">
+          <div class="row">
+              <div class="col-md-6 offset-md-3">
+                  <h3>Upload Image</h3>
+                  <div class="form-group">
+                      <input type="file" name="image" (change)="fileProgress($event)" />
+                  </div>
+                  <div *ngIf="fileUploadProgress">
+                      Upload progress: {{ fileUploadProgress }}
+                  </div>
+                  <div class="image-preview mb-3" *ngIf="previewUrl">
+                      <img [src]="previewUrl" height="300" />
+                  </div>
+
+                  <div class="mb-3" *ngIf="uploadedFilePath">
+                      {{uploadedFilePath}}
+                  </div>
+
+                  <div class="form-group">
+                      <button class="btn btn-primary"  (click)="onSubmit()">Upload</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+        <br>
+        <span class="text-danger" *ngIf="(!userRegistration.touched) && userRegistration.invalid"> Please enter your details</span>
+    </div>
+          <a class="register">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button  type="submit" class="btn" (click)="register()" [disabled]="userRegistration.invalid"  >Register</button>
+          </a>
+
+        </form>
+      </div>
+    </body>

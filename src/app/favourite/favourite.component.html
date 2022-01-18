@@ -1,0 +1,40 @@
+<header>
+    <nav>
+      <H1 id="logo"><i class="fas fa-music"></i>iMusic</H1>
+      <div class="links">
+
+        <a routerLink="/dashboard" routerLinkActive="link-active">Dashboard</a>
+
+        <a routerLink="/favourite" routerLinkActive="link-active">Favourites</a>
+        <a (click)="logout()">Logout</a>
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+  <div id="circle"></div>
+<body>
+    <ul class="music-list">
+    <li>
+        <p>Number</p>
+
+        <p>Song</p>
+
+        <p>Play</p>
+
+   </li>
+</ul>
+<ul class="music-list" *ngFor = "let track of musicList;let i = index">
+    <li>
+        <p id="rank">{{i+1}}</p>
+
+        <p id="song">{{track.trackName | titlecase }}</p>
+
+
+      <audio controls id="audio">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" type="audio/mpeg" />
+      </audio>
+
+
+    </li>
+</ul>
+</body>

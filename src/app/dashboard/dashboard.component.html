@@ -1,0 +1,273 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+<header>
+  <nav>
+    <H1 id="logo"><i class="fas fa-music"></i>iMusic</H1>
+    <div class="links">
+
+      <a routerLink="/dashboard" routerLinkActive="link-active">Dashboard</a>
+
+      <a routerLink="/favourite" routerLinkActive="link-active">Favourites</a>
+      <a (click)="logout()">Logout</a>
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+</header>
+<div id="circle"></div>
+
+
+
+  <!--import bootstrap cdn-->
+  <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity=
+"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous">
+
+  <!--import jquery cdn-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity=
+"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous">
+  </script>
+
+  <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity=
+"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous">
+  </script>
+
+  <style type="text/css">
+
+
+      .bottomnav {
+          background-color: #E5E5E5;
+          overflow: hidden;
+          height: 40px;
+          padding: 8px;
+      }
+
+      a {
+          color: black;
+          padding-right: 20px;
+          font-weight: bold;
+      }
+  </style>
+
+
+
+  <div class="bottomnav">
+      <a class="active" href="#">Pop</a>
+      <a href="#">Rock</a>
+      <a href="#">Hip Hop</a>
+      <a href="#">Jazz</a>
+      <a href="#">Rap</a>
+      <a href="#">Melody</a>
+      <a href="#">Disco</a>
+      <a href="#">K-Pop</a>
+  </div>
+
+
+<!-- CONTAINER OF CARDS DRAGS HORIZONTAL -->
+<div class="container-cards">
+<div>
+  <b>Suggested for You</b>
+  <div class="cards scroll-container">
+    <div class="card">
+      <div>
+        <img
+          src="https://los40es00.epimg.net/los40/imagenes/2018/07/13/musica/1531482325_607205_1531483331_noticia_normal.jpg"
+          alt=""
+          class="img-card-drag"
+        />
+      </div>
+      <br />
+      <p>
+        <strong>Drake</strong>
+      </p>
+    </div>
+    <div class="card">
+      <div>
+        <img
+          src="https://www.peta.org/wp-content/uploads/2013/11/Ariana-Grande-Starmaxinc.com.jpg"
+          alt=""
+          class="img-card-drag"
+        />
+      </div>
+      <br />
+      <p>
+        <strong>Ariana Grande</strong>
+      </p>
+    </div>
+    <div class="card">
+      <div>
+        <img
+          src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F611d2358ae36f5a447f23b18%2F2015-American-Music-Awards---Arrivals%2F960x0.jpg%3FcropX1%3D0%26cropX2%3D1925%26cropY1%3D57%26cropY2%3D1340"
+          alt=""
+          class="img-card-drag"
+        />
+      </div>
+      <br />
+      <p>
+        <strong>Justin Bieber</strong>
+      </p>
+    </div>
+    <div class="card">
+      <div>
+        <img
+          src="https://pyxis.nymag.com/v1/imgs/c10/524/1853b57c011cf5fd8ebc8f4b149345d5d3-BTS-JOIN-LOUIS-VUITTON-AS-HOUSE-AMBASSAD.rsquare.w700.jpg"
+          alt=""
+          class="img-card-drag"
+        />
+      </div>
+      <br />
+      <p>
+        <strong>BTS</strong>
+      </p>
+    </div>
+    <div class="card">
+      <div>
+        <img
+          src="https://thumbor.forbes.com/thumbor/1950x1950/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ceec355142c500008f42068%2FRihanna-Diamond-Ball-Forbes-Women%2F0x0.jpg%3FcropX1%3D32%26cropX2%3D1982%26cropY1%3D257%26cropY2%3D2207"
+          alt=""
+          class="img-card-drag"
+        />
+      </div>
+      <br />
+      <p>
+        <strong>Rihanna</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <div>
+        <img
+          src="https://www.rockandpop.cl/wp-content/uploads/2019/11/weeknd-400x360.jpg"
+          alt=""
+          class="img-card-drag"
+        />
+      </div>
+      <br />
+      <p>
+        <strong>The Weeknd</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <div>
+        <img
+          src="https://images.hindustantimes.com/img/2021/05/05/550x309/f393839a7d2f476bb5d7db696ff25ec1-f393839a7d2f476bb5d7db696ff25ec1-0_1620192764180_1620192803252.jpg"
+          alt=""
+          class="img-card-drag"
+        />
+      </div>
+      <br />
+      <p>
+        <strong>Billie Eilish</strong>
+      </p>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="container-cards">
+<p>
+  <strong>Popular</strong>
+</p>
+
+<div class="grid-popular-genero">
+  <div class="recscroll">
+    <!-- BOX CARDS POPULAR -->
+    <div class="grid-card-popular"*ngFor='let track of mTracks;let i=index'>
+      <div>
+
+        <img
+          src="https://source.unsplash.com/bsLXJsucvxc/100x100"
+          alt=""
+          height="24px"
+          width="24 px"
+        />
+      </div>
+
+      <div class="mt-txt-card" >
+        <p>{{i+1}}</p>
+      </div>
+      <div class="mt-txt-card" >
+        <p id="trackname">{{track.name | titlecase}}</p>
+      </div>
+      <div class="mt-txt-card">
+        <p>{{track.artist.name}}</p>
+        <audio controls id="audio">
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" type="audio/mpeg" />
+        </audio>
+        
+      </div >
+
+      <i class="far fa-heart float-right" (click)="addFav(track)"></i>
+
+
+    </div>
+</div>
+
+
+
+<div>
+  <div class="grid-generos">
+    <b>Top Album</b>
+    <br>
+  <div class="card"><br>
+    <div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/d/db/BTS_-_Butter.png"
+        alt=""
+        class="img-card-drag"
+      />
+    </div>
+    <br />
+    <p>
+      <strong>Butter</strong>
+    </p>
+  </div>
+</div>
+
+
+  <!-- BOX OF GENEROS -->
+  <!-- <div class="grid-generos">
+    <div class="box-genero" id="Classic">
+      <p class="mt-genero" >Classic</p>
+    </div>
+     <div class="box-genero">
+      <p class="mt-genero">Trap</p>
+    </div>
+    <div class="box-genero">
+      <p class="mt-genero">Rap</p>
+    </div>
+    <div class="box-genero">
+      <p class="mt-genero">Electro House</p>
+    </div>
+
+  </div>
+  <div class="grid-generos">
+    <div class="box-genero">
+      <p class="mt-genero">Melody</p>
+    </div>
+    <div class="box-genero">
+      <p class="mt-genero">Rock</p>
+    </div>
+    <div class="box-genero">
+      <p class="mt-genero">Soul</p>
+    </div>
+    <div class="box-genero">
+      <p class="mt-genero">Jazz</p>
+    </div>
+</div>
+
+</div>
+
+
+  -->

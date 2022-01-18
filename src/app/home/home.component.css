@@ -1,0 +1,52 @@
+
+.music{
+  float: left;
+  margin-right:250px;
+   position: relative;
+   top: -150px;
+}
+.headcontent{
+    font-size: 40px;
+    position: relative;
+    margin: 30px;
+    top:150px;
+    color: white;
+    text-transform:uppercase ;
+    font-weight: bolder;
+    align-self: center;
+}
+.content{
+    font-size: 20px;
+    margin: 30px;
+    color: white;
+    position: relative;
+    top: 150px;
+
+    font-weight: lighter;
+}
+
+a{
+    border:2px solid white;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 30px;
+    position: relative;
+    top: 160px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
+}
+.button{
+    display:flex;
+
+}
+.title{
+    margin-left: 200px;
+    margin-top: 20px;
+}

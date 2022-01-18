@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+  }
+  body {
+
+    background-color: #1b1c22;
+    font-size: 14px;
+    color: white;
+    margin:10px;
+  }
+
+
+
+  header {
+    cursor: crosshair;
+    background-color: black;
+  }
+
+  nav {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(95deg,#141e30, #243b55);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition-delay: 0s, 4s;
+    transition-timing-function: linear;
+    transition: background-size 2s ease, background-position-x 2s ease;
+    overflow: hidden;
+  }
+  nav:focus{
+      color: #03e9f4,
+
+  }
+  nav:hover {
+    background-size: 100% 100%;
+    background-position-x: 200%;
+
+  }
+
+  nav h1::selection {
+    color: black;
+    background-color: white;
+  }
+
+  nav h1 {
+    color: white;
+    padding: 0 20px;
+    filter: drop-shadow(0px 0px 2px black);
+    transition-delay: 1.8s;
+    transition-duration: 0.2s;
+    transition-property: color;
+  }
+
+  nav h1:hover {
+    color: #03e9f4;
+  }
+
+  nav .links {
+    padding: 0 20px;
+  }
+
+  nav .links a {
+    margin: 0 30px;
+    text-decoration: none;
+    color: white;
+    filter: drop-shadow(0px 0px 2px black);
+  }
+
+  nav .links .fas {
+    display: none;
+    color: white;
+    filter: drop-shadow(0px 0px 2px black);
+    font-size: 1.3em;
+  }
+
+  nav .links .fas:hover {
+    color: black;
+  }
+
+
+
+   .link-active
+   {
+
+    font-weight: bold;
+      font: size 20px;
+      border-bottom:2px solid ;
+    border-color: #03e9f4;
+    transition: all .25s;
+
+  }
+
+  #circle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    backdrop-filter: invert(1);
+    pointer-events: none;
+  }
+
+  ::selection {
+    color: white;
+    background: black;
+  }
+
+  @media (max-width: 700px) {
+    nav .links .fas {
+      display: block;
+    }
+
+    nav .links a {
+      display: none;
+    }
+  }
+
+  /* CARDS DRAGS */
+  .cards {
+    display: flex;
+    max-width: 100%;
+    padding: 1em;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black black;
+    scroll-behavior:smooth;
+
+  }
+  .cards:hover{
+    scrollbar-width: thin;
+    scrollbar-color: #03e9f4 black;
+    scroll-behavior:smooth;
+
+  }
+  .card {
+
+    background-color: transparent;
+    margin-right: 1em;
+    padding: 10px;
+    flex: 1 0 10em;
+    border: 0px solid #000000;
+  }
+  .img-card-drag {
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+  }
+
+.recscroll {
+  scrollbar-width:thin;
+  scrollbar-color: #03e9f4 black;
+  height: 535px;
+ width: 1000px;
+  overflow: auto;
+  scroll-behavior:smooth;
+}
+
+  /* CARDS POPULAR AND GENEROS */
+
+  .grid-card-popular {
+
+    display: grid;
+    grid-template-columns: 10% 5% auto 30% 6%;
+    background-color: #25262c;
+    padding: 5px 0px 5px ;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 5px;
+  }
+
+  .grid-card-popular:hover {
+    transition: 0.5s;
+    background-color: #000000;
+  }
+  #trackname {
+
+    margin-top: 5px;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+  }
+  .div-top
+  {
+    z-index: 20;
+  }
+  .grid-generos {
+    display: flex;
+    grid-template-columns: 50% 50%;
+    float:right;
+    margin-right:90px;
+    height: 260px;
+    width: 260px;
+  }
+  .box-genero {
+    margin-left: 100px;
+    width: 350px;
+    height: 130px;
+    background-color: #25262c;
+    text-align: center;
+    transition: 0.5s;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .box-genero:hover {
+    transition: 0.5s;
+    background-color: #000000;
+  }
+  .mt-genero {
+    margin-top: 20%;
+  }
+.container-cards
+{
+  margin:20px;
+}
+
+  /* MEDIA QUERIES OF BOX POPULAR AND OF TYPES OF MUSIC */
+  /* DESKTOP */
+  @media (min-width: 1024px) {
+    .grid-popular-genero {
+      display: grid;
+      grid-template-columns: 50% 45%;
+      grid-gap: 20px;
+     align-content: center;
+    }
+  }
+
+
+  /* MOBILE */
+  @media (max-width: 1024px) {
+    .grid-popular-genero {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 10px;
+    }
+  }
+
+
+  
